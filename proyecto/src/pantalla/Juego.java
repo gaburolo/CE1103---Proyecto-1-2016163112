@@ -239,18 +239,17 @@ public class Juego extends Application{
         
         //Hileras de enemigos  nivel 1
         Basic hilera1= new Basic();
-        
     	ClaseA hilera2=new ClaseA();
     	
         
-
+    	//Crea una lista donde se guadaran las hileras de enemigos
         lista<lista> listaEnemi=new lista<>();
+        //Crea una lista con los nombres de la clase Actual y la Siguiente
         lista<String> copia1 = new lista<>();
         lista<String> copiaActual1 = new lista<>();
         int g=0;
         while(g!=3) {
         	int rand= num.nextInt((2)-0);
-        	
         	if(rand==0) {
         		lista<Sprite> hilera1enemi = hilera1.hilera();
         		listaEnemi.AgregarFinal(hilera1enemi);
@@ -268,7 +267,11 @@ public class Juego extends Application{
         
         //Hileras de enemigos NIVEL 2
         ClaseB hilera3=new ClaseB();
+        
+        
+        //Crea una lista donde se guadaran las hileras de enemigos
         lista<listaD> listaEnemi2 = new lista<>();
+        //Crea una lista con los nombres de la clase Actual y la Siguiente
         lista<String> copia2=new lista<>();
         lista<String> copiaActual2=new lista<>();
         g=0;
@@ -285,7 +288,10 @@ public class Juego extends Application{
         //Hileras de enemigos NIVEL 3
         ClaseC hilera4=new ClaseC();
         ClaseD hilera5= new ClaseD();
+        
+        //Crea una lista donde se guadaran las hileras de enemigos
         lista<listaCircular> listaEnemi3 = new lista<>();
+        //Crea una lista con los nombres de la clase Actual y la Siguiente
         lista<String> copia3= new lista<>();
         lista<String> copiaActual3= new lista<>();
         
@@ -310,8 +316,10 @@ public class Juego extends Application{
         
 	    //Hileras de enemigos Nivel 4
         ClaseE hilera6=new ClaseE();
+        
+        //Crea una lista donde se guadaran las hileras de enemigos
         lista<listaCD> listaEnemi4 = new lista<>();
-	    
+        //Crea una lista con los nombres de la clase Actual y la Siguiente
         lista<String> copia4=new lista<>();
         lista<String> copiaActual4=new lista<>();
         
@@ -540,7 +548,8 @@ public class Juego extends Application{
 					if( listaEnemi.getTamanio()!=0 && listaEnemi.getTamanio()>numHilera && listaEnemi.getDatoPos(numHilera).getTamanio()!=0){
 						int i=0;
 						if(cont==0) {
-							((Sprite) listaEnemi.getDatoPos(numHilera).getDatoPos(1)).setPosicion(H1x,H1y);
+							
+							((Sprite) listaEnemi.getDatoPos(numHilera).getDatoPos(0)).setPosicion(H1x,H1y);
 							
 							
 							

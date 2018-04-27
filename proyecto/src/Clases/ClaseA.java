@@ -41,6 +41,7 @@ public class ClaseA {
 		enemilist.AgregarFinal(kuramon5);
 		enemilist.AgregarFinal(kuramon6);
 		enemilist.AgregarFinal(kuramon7);
+		
 		return enemilist;
 		
 		
@@ -51,7 +52,8 @@ public class ClaseA {
 	 */
 	public lista<Sprite> AgregarJefe(){
 		Random n= new Random();
-		int num=n.nextInt((hilera().getTamanio()-1)-0);
+		
+		int num=1+n.nextInt((hilera().getTamanio()-1)-0);
 		int Numvida=2+n.nextInt(4);
 		Sprite keramon = new Sprite("imagenes/keramon.png",62,46,Numvida);
 		hilera=hilera();
